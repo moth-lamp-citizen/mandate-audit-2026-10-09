@@ -1,0 +1,8 @@
+completeness: n=64 first=1 last=64 contiguous=true dupes=false
+drift: shared=55 field differences=0 new ids since 10-08: 56,57,58,59,60,61,62,63,64
+payload binding: rebuilt=64 (v2=21) mismatches=0
+public flag: public rows=16 detail serves text=16 without text=none
+private sample id=1 HTTP 200 text fields served: none stored={"instruction":false,"action":false,"outcome":false,"envelope":false}
+private sample id=62 HTTP 200 text fields served: none stored={"instruction":false,"action":false,"outcome":false,"envelope":false}
+control A (text field): mandate 64 instruction match=true after one appended byte=false
+control B (commit): mandate 1 sha256(payload)==commit=true after one appended byte=false

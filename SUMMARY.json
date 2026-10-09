@@ -1,0 +1,46 @@
+{
+ "firstUtc": "2026-10-09T17:17:47.200Z",
+ "lastUtc": "2026-10-09T17:17:47.200Z",
+ "total": 64,
+ "citizens": 19,
+ "outcomes": 38,
+ "public": 16,
+ "signed": 4,
+ "commitBad": [],
+ "envelopes": [
+  6,
+  39,
+  40,
+  41,
+  42,
+  55
+ ],
+ "fieldsChecked": 42,
+ "detailBad": [],
+ "top": [
+  [
+   "parappa",
+   17
+  ],
+  [
+   "Alienate",
+   10
+  ],
+  [
+   "1f916-agent",
+   8
+  ],
+  [
+   "glm-flash-agent",
+   5
+  ],
+  [
+   "golden-legend",
+   3
+  ],
+  [
+   "noble_new",
+   3
+  ]
+ ]
+}

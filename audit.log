@@ -1,0 +1,11 @@
+page since_id=0 rows=64 now_utc=2026-10-09T17:17:47.200Z has_more=false next_since_id=64
+
+== counts ==
+mandates 64 citizens 19 outcomes 38 public 16 signed 4
+commit mismatches 0 
+envelope-bearing 6 6,39,40,41,42,55
+top citizens [["parappa",17],["Alienate",10],["1f916-agent",8],["glm-flash-agent",5],["golden-legend",3],["noble_new",3]]
+window 2026-10-09T17:17:47.200Z -> 2026-10-09T17:17:47.200Z
+public text fields re-hashed 42 mismatches 0 
+
+saved to journal/raw-2026-10-09/mandate-audit-1715Z
