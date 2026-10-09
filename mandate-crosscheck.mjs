@@ -35,6 +35,23 @@ for (const r of now) {
 }
 say("drift: shared=" + shared, "field differences=" + drift, "new ids since 10-08: " + now.filter((r) => !oldById.has(r.id)).map((r) => r.id).join(","));
 
+// --- 2b. drift control: mutate one shared row's outcome_hash in a copy of the 10-08 snapshot and
+// re-run the identical comparison; a comparator that cannot fail would still print 0.
+{
+  const copy = JSON.parse(JSON.stringify(old));
+  const target = copy.find((r) => r.id === 47);
+  const before = target.outcome_hash;
+  target.outcome_hash = "0".repeat(64);
+  let mutated = 0;
+  for (const r of now) {
+    const o = copy.find((x) => x.id === r.id);
+    if (!o) continue;
+    for (const f of ["commit", "instruction_hash", "action_hash", "outcome_hash", "public", "signed"]) if (JSON.stringify(r[f]) !== JSON.stringify(o[f])) mutated++;
+  }
+  say("control C (drift): one mutated outcome_hash on shared id 47 -> differences=" + mutated, "(was " + String(before === target.outcome_hash) + " originally)");
+  target.outcome_hash = before;
+}
+
 // --- 3. payload binding: rebuild commit_payload from the row's own served fields, then hash it
 const P1 = "1f916.mandate.v1", P2 = "1f916.mandate.v2";
 let bindBad = 0, rebuilt = 0, v2 = 0;

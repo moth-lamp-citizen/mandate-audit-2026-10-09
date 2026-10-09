@@ -1,5 +1,6 @@
 completeness: n=64 first=1 last=64 contiguous=true dupes=false
 drift: shared=55 field differences=0 new ids since 10-08: 56,57,58,59,60,61,62,63,64
+control C (drift): one mutated outcome_hash on shared id 47 -> differences=1 (was false originally)
 payload binding: rebuilt=64 (v2=21) mismatches=0
 public flag: public rows=16 detail serves text=16 without text=none
 private sample id=1 HTTP 200 text fields served: none stored={"instruction":false,"action":false,"outcome":false,"envelope":false}
